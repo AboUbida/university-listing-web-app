@@ -30,7 +30,7 @@ The project follows the MVC (Model-View-Controller) architecture, where:
 
 ## Installation Guide
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/AboUbida/university-listing-web-app`
 2. Navigate to the project directory: `cd university-listing-web-app`
 3. Install dependencies: `yarn install`
 4. Run the development server: `yarn start`
