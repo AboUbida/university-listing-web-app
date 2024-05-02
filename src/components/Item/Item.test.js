@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { render, fireEvent } from "@testing-library/react";
 import Item from "./Item";
 
@@ -13,7 +14,11 @@ describe("Item", () => {
   const onDelete = jest.fn();
 
   it("renders item card with delete button", () => {
-    const { getByText } = render(<Item item={item} onDelete={onDelete} />);
+    const { getByText } = render(
+      <Router>
+        <Item item={item} onDelete={onDelete} />
+      </Router>
+    );
     // eslint-disable-next-line testing-library/prefer-screen-queries
     expect(getByText("University 1")).toBeInTheDocument();
     // eslint-disable-next-line testing-library/prefer-screen-queries
@@ -21,7 +26,11 @@ describe("Item", () => {
   });
 
   it("calls onDelete function when delete button is clicked", () => {
-    const { getByText } = render(<Item item={item} onDelete={onDelete} />);
+    const { getByText } = render(
+      <Router>
+        <Item item={item} onDelete={onDelete} />
+      </Router>
+    );
     // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByText("Delete"));
     expect(onDelete).toHaveBeenCalledTimes(1);
