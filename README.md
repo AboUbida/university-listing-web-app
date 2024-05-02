@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# University Listing Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The University Listing Web App is a ReactJS-based web application that allows users to browse and interact with a list of universities. It provides features such as listing universities, displaying details, searching, sorting, and deleting items.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- List universities from the United Arab Emirates.
+- Display university details.
+- Search universities by name or domain.
+- Sort universities alphabetically.
+- Delete universities from the list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ReactJS
+- localStorage
+- Axios
+- CSS for styling
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project follows the MVC (Model-View-Controller) architecture, where:
 
-### `npm run build`
+- `src/components` contains React components.
+- `src/services` contains the ApiService for fetching data from the API.
+- `src/utils` contains utility functions.
+- `src/tests` contains unit tests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation Guide
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd university-listing-web-app`
+3. Install dependencies: `yarn install`
+4. Run the development server: `yarn start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage Guide
 
-### `npm run eject`
+1. Upon landing on the Listing page, the user sees a list of universities fetched from the API.
+2. The user can click on a university to view its details.
+3. The user can search for a university by name or domain using the search bar.
+4. The user can sort the list alphabetically using the dropdown.
+5. The user can delete a university by clicking on the delete button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Unit tests are implemented for critical parts of the application, including network request handling, data retrieval, and external dependencies. Run tests using `yarn test`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Error Handling
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- If the API fails, the app retrieves data from the local storage if available.
+- Error messages are displayed for API fetch errors and other errors.
 
-## Learn More
+## Offline Support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The web app seamlessly handles API failures by utilizing cached data in the local storage.
